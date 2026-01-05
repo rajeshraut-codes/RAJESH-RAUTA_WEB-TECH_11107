@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Conditions and Loops</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f6;
+            padding: 20px;
+        }
+        .box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript Conditional Statements and Loops</h1>
+
+<div class="box">
+    <h2>1. Conditional Statement (if–else)</h2>
+    <p id="conditionResult"></p>
+</div>
+
+<div class="box">
+    <h2>2. For Loop</h2>
+    <p id="forLoop"></p>
+</div>
+
+<div class="box">
+    <h2>3. While Loop</h2>
+    <p id="whileLoop"></p>
+</div>
+
+<div class="box">
+    <h2>4. Do–While Loop</h2>
+    <p id="doWhileLoop"></p>
+</div>
+
+<script>
+
+    let number = 10;
+    if (number % 2 === 0) {
+        document.getElementById("conditionResult").innerHTML =
+            number + " is an Even number";
+    } else {
+        document.getElementById("conditionResult").innerHTML =
+            number + " is an Odd number";
+    }
+
+    let forText = "";
+    for (let i = 1; i <= 5; i++) {
+        forText += i + " ";
+    }
+    document.getElementById("forLoop").innerHTML =
+        "Numbers using for loop: " + forText;
+
+    let j = 1;
+    let whileText = "";
+    while (j <= 5) {
+        whileText += j + " ";
+        j++;
+    }
+    document.getElementById("whileLoop").innerHTML =
+        "Numbers using while loop: " + whileText;
+
+    let k = 1;
+    let doWhileText = "";
+    do {
+        doWhileText += k + " ";
+        k++;
+    } while (k <= 5);
+
+    document.getElementById("doWhileLoop").innerHTML =
+        "Numbers using do–while loop: " + doWhileText;
+</script>
+
+</body>
+</html>

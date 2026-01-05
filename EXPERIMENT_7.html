@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced CSS Styling</title>
+
+    <style>
+        /* PAGE BACKGROUND */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("https://via.placeholder.com/1200x600");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* MAIN CONTAINER (BOX MODEL) */
+        .container {
+            width: 700px;
+
+            /* margin */
+            margin: 40px auto;
+
+            /* padding */
+            padding: 20px;
+
+            /* border */
+            border: 3px solid #2c3e50;
+            border-radius: 10px;
+
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        /* CONTENT BOX */
+        .content-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px dashed green;
+            background-color: #e8f5e9;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-top: 2px solid gray;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Advanced CSS Styling</h1>
+
+    <div class="content-box">
+        <p>
+            This web page demonstrates advanced CSS concepts like
+            <b>Box Model</b>, <b>background image</b>,
+            <b>border</b>, <b>margin</b>, and <b>padding</b>.
+        </p>
+
+        <p>
+            Padding creates space inside the box,
+            while margin creates space outside the box.
+        </p>
+    </div>
+
+    <footer>
+        © 2026 | Created by Prem
+    </footer>
+
+</div>
+
+</body>
+</html>

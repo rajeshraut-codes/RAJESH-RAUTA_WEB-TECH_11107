@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Functions and Scope</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f6;
+            padding: 20px;
+        }
+        .box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript Functions & Scope</h1>
+
+<div class="box">
+    <h2>1. User-Defined Function</h2>
+    <p id="functionResult"></p>
+</div>
+
+<div class="box">
+    <h2>2. var, let, const Scope</h2>
+    <p id="scopeResult"></p>
+</div>
+
+<script>
+    /* USER-DEFINED FUNCTION */
+    function addNumbers(a, b) {
+        return a + b;
+    }
+
+    let sum = addNumbers(5, 10);   
+    document.getElementById("functionResult").innerHTML =
+        "Sum using user-defined function: " + sum;
+
+    /* SCOPE DEMONSTRATION */
+    var x = 10;      
+    let y = 20;      
+    const z = 30;    
+
+    function scopeTest() {
+        var x = 100;
+        let y = 200;
+        const z = 300; 
+
+        return "Inside function → var x = " + x +
+               ", let y = " + y +
+               ", const z = " + z;
+    }
+
+    let scopeText = scopeTest() +
+        "<br>Outside function → var x = " + x +
+        ", let y = " + y +
+        ", const z = " + z;
+
+    document.getElementById("scopeResult").innerHTML = scopeText;
+</script>
+
+</body>
+</html>

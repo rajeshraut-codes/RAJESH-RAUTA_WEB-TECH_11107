@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Event Listeners</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f6;
+            padding: 20px;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        #hoverBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JavaScript Event Listeners</h1>
+
+<div class="box">
+    <h2>1. Mouse Event (click & mouseover)</h2>
+    <div id="hoverBox">Hover / Click Me</div>
+    <button id="removeMouse">Remove Mouse Events</button>
+</div>
+
+<div class="box">
+    <h2>2. Keyboard Event (keydown)</h2>
+    <input type="text" id="keyInput" placeholder="Type something">
+    <p id="keyResult"></p>
+</div>
+
+<script>
+    // ELEMENT SELECTION
+    let box = document.getElementById("hoverBox");
+    let removeBtn = document.getElementById("removeMouse");
+
+    // MOUSE EVENT FUNCTIONS
+    function boxClicked() {
+        alert("Box clicked!");
+    }
+
+    function boxHovered() {
+        box.style.backgroundColor = "lightgreen";
+    }
+
+    // ADD EVENT LISTENERS
+    box.addEventListener("click", boxClicked);
+    box.addEventListener("mouseover", boxHovered);
+
+    // REMOVE EVENT LISTENERS
+    removeBtn.addEventListener("click", function () {
+        box.removeEventListener("click", boxClicked);
+        box.removeEventListener("mouseover", boxHovered);
+        alert("Mouse events removed");
+    });
+
+    // KEYBOARD EVENT
+    document.getElementById("keyInput")
+        .addEventListener("keydown", function (event) {
+            document.getElementById("keyResult").innerHTML =
+                "Key pressed: " + event.key;
+        });
+</script>
+
+</body>
+</html>

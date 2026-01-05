@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation using JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f6;
+        }
+
+        .form-box {
+            width: 350px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 8px;
+        }
+
+        small {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Student Login Form</h2>
+
+    <!-- onsubmit EVENT -->
+    <form onsubmit="return validateForm()">
+
+        <label>Username:</label>
+        <!-- oninput EVENT -->
+        <input type="text" id="username" oninput="checkUsername()">
+        <small id="userError"></small>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+</div>
+
+<script>
+    // oninput validation
+    function checkUsername() {
+        let name = document.getElementById("username").value;
+
+        if (name.length < 3) {
+            document.getElementById("userError").innerHTML =
+                "Username must be at least 3 characters";
+        } else {
+            document.getElementById("userError").innerHTML = "";
+        }
+    }
+
+    // onsubmit validation
+    function validateForm() {
+        let name = document.getElementById("username").value;
+        let pass = document.getElementById("password").value;
+
+        if (name === "" || pass === "") {
+            alert("All fields are required!");
+            return false;
+        }
+
+        if (pass.length < 6) {
+            alert("Password must be at least 6 characters!");
+            return false;
+        }
+
+        alert("Form submitted successfully!");
+        return true;
+    }
+</script>
+
+</body>
+</html>

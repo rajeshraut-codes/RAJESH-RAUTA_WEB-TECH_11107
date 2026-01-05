@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Create & Manipulate Elements</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f6;
+            padding: 20px;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 6px 10px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>DOM Element Manipulation</h1>
+
+<div class="box">
+    <h2>Student List</h2>
+    <ul id="studentList">
+        <li>Prem</li>
+        <li>Rahul</li>
+    </ul>
+
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="removeItem()">Remove Last Item</button>
+    <button onclick="modifyItem()">Modify First Item</button>
+</div>
+
+<script>
+    // APPEND (Create + Add new child)
+    function addItem() {
+        let li = document.createElement("li");
+        li.innerHTML = "New Student";
+        document.getElementById("studentList").appendChild(li);
+    }
+
+    // REMOVE (Remove last child)
+    function removeItem() {
+        let list = document.getElementById("studentList");
+        if (list.lastElementChild) {
+            list.removeChild(list.lastElementChild);
+        }
+    }
+
+    // MODIFY (Change existing child)
+    function modifyItem() {
+        let list = document.getElementById("studentList");
+        if (list.firstElementChild) {
+            list.firstElementChild.innerHTML = "Updated Student";
+        }
+    }
+</script>
+
+</body>
+</html>

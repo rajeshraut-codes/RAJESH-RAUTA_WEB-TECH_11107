@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Hide & Toggle Class</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f6;
+            padding: 20px;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+
+        /* HIDDEN CLASS */
+        .hidden {
+            display: none;
+        }
+
+        /* TOGGLE CLASS */
+        .highlight {
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 6px 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Show / Hide & Toggle CSS Class</h1>
+
+<!-- SHOW / HIDE -->
+<div class="box">
+    <h2>1. Show / Hide Element</h2>
+    <p id="textBox">This text can be shown or hidden.</p>
+
+    <button onclick="hideText()">Hide</button>
+    <button onclick="showText()">Show</button>
+</div>
+
+<!-- TOGGLE CLASS -->
+<div class="box">
+    <h2>2. Toggle CSS Class</h2>
+    <p id="toggleText">Click button to toggle style.</p>
+
+    <button onclick="toggleStyle()">Toggle Style</button>
+</div>
+
+<script>
+    // SHOW / HIDE FUNCTIONS
+    function hideText() {
+        document.getElementById("textBox").classList.add("hidden");
+    }
+
+    function showText() {
+        document.getElementById("textBox").classList.remove("hidden");
+    }
+
+    // TOGGLE CLASS FUNCTION
+    function toggleStyle() {
+        document.getElementById("toggleText").classList.toggle("highlight");
+    }
+</script>
+
+</body>
+</html>

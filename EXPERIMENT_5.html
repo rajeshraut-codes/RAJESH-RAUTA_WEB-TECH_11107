@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic HTML Web Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f6;
+            margin: 0;
+        }
+
+        header, nav, section, article, aside, footer {
+            padding: 15px;
+            margin: 10px;
+            background: white;
+            border-radius: 6px;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: blue;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        section {
+            width: 70%;
+        }
+
+        aside {
+            width: 30%;
+            background-color: #e8f0fe;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Semantic Web Page</h1>
+    <p>Using HTML5 semantic elements</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <section>
+        <h2>Main Section</h2>
+
+        <article>
+            <h3>Article 1</h3>
+            <p>
+                This is an article inside a section.
+                Articles contain independent content.
+            </p>
+        </article>
+
+        <article>
+            <h3>Article 2</h3>
+            <p>
+                Semantic tags help browsers and search engines
+                understand the structure of a webpage.
+            </p>
+        </article>
+    </section>
+
+    <aside>
+        <h3>Aside Section</h3>
+        <p>
+            This area contains related information,
+            ads, or extra links.
+        </p>
+    </aside>
+
+</div>
+
+<footer>
+    © 2026 | Created by Prem
+</footer>
+
+</body>
+</html>

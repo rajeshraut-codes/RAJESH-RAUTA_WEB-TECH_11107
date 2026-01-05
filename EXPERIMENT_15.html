@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f6;
+            padding: 20px;
+        }
+        .box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+        button {
+            margin-top: 8px;
+            padding: 6px 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>DOM Manipulation in JavaScript</h1>
+
+<div class="box">
+    <h2>1. getElementById()</h2>
+    <p id="text1">This is original text.</p>
+    <button onclick="changeById()">Change Text</button>
+</div>
+
+<div class="box">
+    <h2>2. querySelector()</h2>
+    <p class="text2">This text will change color.</p>
+    <button onclick="changeByQuery()">Change Color</button>
+</div>
+
+<div class="box">
+    <h2>3. innerHTML</h2>
+    <div id="box3">Old content</div>
+    <button onclick="changeInnerHTML()">Replace Content</button>
+</div>
+
+<script>
+    // 1️ getElementById()
+    function changeById() {
+        document.getElementById("text1").innerHTML =
+            "Text changed using getElementById()";
+    }
+
+    // 2️ querySelector()
+    function changeByQuery() {
+        document.querySelector(".text2").style.color = "green";
+    }
+
+    // 3️ innerHTML
+    function changeInnerHTML() {
+        document.getElementById("box3").innerHTML =
+            "<b>New content added using innerHTML</b>";
+    }
+</script>
+
+</body>
+</html>

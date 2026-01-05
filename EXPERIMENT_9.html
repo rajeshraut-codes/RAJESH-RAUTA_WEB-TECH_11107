@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Web Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f6;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .container {
+            padding: 1rem;
+        }
+
+        .card {
+            background: white;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            background-color: #ddd;
+        }
+        @media (min-width: 600px) {
+            .container {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .card {
+                width: 50%;
+            }
+        }
+        @media (min-width: 992px) {
+            header {
+                font-size: 1.5rem;
+            }
+
+            .card {
+                width: 33.33%;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Responsive Web Page (Mobile-First)
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>HTML</h2>
+        <p>HTML is used to create the structure of web pages.</p>
+    </div>
+
+    <div class="card">
+        <h2>CSS</h2>
+        <p>CSS is used to style and make web pages responsive.</p>
+    </div>
+
+    <div class="card">
+        <h2>JavaScript</h2>
+        <p>JavaScript adds interactivity to web pages.</p>
+    </di
